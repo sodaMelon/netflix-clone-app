@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/model/box_slider.dart';
+import 'package:netflix_clone/model/circle_slider.dart';
 import 'package:netflix_clone/model/model_movie.dart';
 import 'package:netflix_clone/widget/carousel_slider.dart';
 
@@ -9,27 +11,27 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Movie> movies = [
     Movie.fromMap({
-      'title': '사랑의 불시착1',
+      'title': '사랑의 불시착',
       'keyword': '사랑/로맨스/판타지',
-      'poster': 'img/test_movie_1.png',
+      'poster': 'images/test_movie_1.png',
       'like': false
     }),
     Movie.fromMap({
       'title': '사랑의 불시착2',
       'keyword': '사랑/로맨스/판타지',
-      'poster': 'img/test_movie_1.png',
+      'poster': 'images/test_movie_1.png',
       'like': false
     }),
     Movie.fromMap({
       'title': '사랑의 불시착3',
       'keyword': '사랑/로맨스/판타지',
-      'poster': 'img/test_movie_1.png',
+      'poster': 'images/test_movie_1.png',
       'like': false
     }),
     Movie.fromMap({
       'title': '사랑의 불시착4',
       'keyword': '사랑/로맨스/판타지',
-      'poster': 'img/test_movie_1.png',
+      'poster': 'images/test_movie_1.png',
       'like': false
     }),
   ];
@@ -47,7 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
             CarouselImage(movies: movies),
             TopBar(),
           ],
-        )
+        ),
+        CircleSlider(movies: movies),
+        BoxSlider(movies: movies),
       ],
     );
   }
@@ -62,7 +66,7 @@ class TopBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'img/logo.png',
+            'images/logo.png',
             fit: BoxFit.contain,
             height: 25,
           ),
