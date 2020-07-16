@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/screen/home_screen.dart';
+import 'package:netflix_clone/screen/search_screen.dart';
 import 'package:netflix_clone/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
@@ -26,11 +27,7 @@ class _MyAppState extends State<MyApp> {
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomeScreen(),
-              Container(
-                child: Center(
-                  child: Text('search'),
-                ),
-              ),
+              SearchScreen(),
               Container(
                 child: Center(
                   child: Text('save'),
