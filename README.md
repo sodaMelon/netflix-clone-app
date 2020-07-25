@@ -1,6 +1,15 @@
 # netflix_clone
 
-A new Flutter project.
+A new Flutter project. 
+
+Flutter의 빠른 리로드(Hot reload)가 궁금해서
+
+넷플릭스 클라이언트app을 제작해봤습니다.
+
+- db연결 google firestore
+- 많이 참고한 사이트 : https://flutter.dev/docs/development/tools/hot-reload
+- 현재 완성도 80%, 정상동작함
+
 
 ## Getting Started
 
